@@ -22,11 +22,9 @@ class Mines(MycroftSkill):
         self.mines_process = subprocess.Popen(
             cmd, stdout=subprocess.PIPE, shell=True, preexec_fn=os.setsid
         )
-        self.log.error(self.mines_process)
 
     @intent_handler("close-mines.intent")
     def handle_close_mines(self, message):
-        self.log.error(self.mines_process)
         if self.mines_process is None:
             self.speak_dialog("error_cannot-find-mines-process")
         else:
