@@ -1,0 +1,2 @@
+(open|play|start|launch) (gnome) mines(|weeper)
+(open|play|start|launch) {size} (gnome) mines(|weeper)
